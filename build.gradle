@@ -19,7 +19,7 @@ test {
     useJUnitPlatform()
 }
 
-task installDist {
+task stage {
     dependsOn shadowJar
 }
 
