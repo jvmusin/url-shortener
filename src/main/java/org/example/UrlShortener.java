@@ -12,7 +12,7 @@ public class UrlShortener {
     @SuppressWarnings("HttpUrlsUsage")
     private static final String SCHEME = "http://";
     private static final String HOST = "localhost";
-    private static final int PORT = 8080;
+    private static final int PORT = System.getenv("PORT") != null ? Integer.parseInt(System.getenv("PORT")) : 8080;
     private static final String PREFIX = SCHEME + HOST + ":" + PORT + "/";
 
     private static final ConcurrentHashMap<String, Integer> urlToCode = new ConcurrentHashMap<>();
