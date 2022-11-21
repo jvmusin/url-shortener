@@ -1,1 +1,1 @@
-web: java -jar build/libs/url-shortener-1.0-SNAPSHOT-all.jar
+web: ./build/native/nativeCompile/url-shortener

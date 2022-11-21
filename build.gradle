@@ -1,6 +1,7 @@
 plugins {
     id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'java'
+    id 'org.graalvm.buildtools.native' version '0.9.18'
 }
 
 group 'org.example'
@@ -26,5 +27,13 @@ task stage {
 shadowJar {
     manifest {
         attributes 'Main-Class': 'org.example.UrlShortener'
+    }
+}
+
+graalvmNative {
+    binaries {
+        main {
+            mainClass = 'org.example.UrlShortener' // The main class to use, defaults to the application.mainClass
+        }
     }
 }
