@@ -1,3 +1,6 @@
-FROM ghcr.io/graalvm/jdk:ol8-java17
+FROM ghcr.io/graalvm/native-image:latest
+COPY . /app
+WORKDIR /app
 RUN ./gradlew stage
-CMD ["./build/native/nativeCompile/url-shortener"]
+ENTRYPOINT ["build/native/nativeCompile/url-shortener"]
+CMD [""]

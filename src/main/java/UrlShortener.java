@@ -1,5 +1,3 @@
-package org.example;
-
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.OutputStream;
@@ -66,6 +64,7 @@ public class UrlShortener {
                 }
             });
 
+            System.out.println("BEFORE START");
             server.start();
         } catch (Throwable e) {
             e.printStackTrace();
