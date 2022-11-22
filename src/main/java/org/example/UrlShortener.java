@@ -1,3 +1,5 @@
+package org.example;
+
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.OutputStream;
