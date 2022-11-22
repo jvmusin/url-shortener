@@ -1,1 +1,0 @@
-web: ./build/native/nativeCompile/url-shortener
